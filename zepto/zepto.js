@@ -608,8 +608,7 @@ var Zepto = (function() {
             var el = this[this.length - 1]
             return el && !isObject(el) ? el : $(el)
         },
-        //获得当前Zepto集合对象内查找符合css选择器的每个元素的后代。
-        //如果参数为Zepto集合对象或者元素，过滤它们，只有当它们在当前Zepto集合对象中时，才回被返回。
+        //搜索所有与指定表达式匹配的元素
         find: function(selector) {
             //此时this指向当前Zepto元素集合，是一个数组形式的对象，又称伪数组
             var result, $this = this
