@@ -546,7 +546,8 @@ var Zepto = (function() {
             })
             return this
         },
-        //过滤Zepto集合对象，返回的Zepto集合对象里面的项满足参数中的css选择器。如果参数为一个函数，函数返回有实际值得时候，元素才会被返回。在函数中，this 关键字指向当前的元素。
+        //筛选出与指定表达式匹配的元素集合，如果参数为一个函数，函数返回有实际值得时候，元素才会被返回
+        //在函数中，this 关键字指向当前的元素。
         //例如：$("div").filter(".test")
         filter: function(selector) {
             if (isFunction(selector)) return this.not(this.not(selector))
@@ -640,7 +641,6 @@ var Zepto = (function() {
                 collection = false
             //如果selector是DOM对象
             if (typeof selector == 'object') collection = $(selector)
-            console.log(node.parentNode)
             //只要node不是collection集合对象中的项，便一直向上循环直至node是collection集合对象中的项终止
             while (node && !(collection ? collection.indexOf(node) >= 0 : zepto.matches(node, selector)))
                 node = node !== context && !isDocument(node) && node.parentNode
