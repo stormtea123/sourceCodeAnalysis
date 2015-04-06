@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>zepto-test.js demo</title>
+    <style>
+    html,
+    body {
+        min-height: 100%;
+        margin:0;
+    }
+    /*#main { width:100px; height:100px; background:red; } */
+    </style>
+</head>
+
+<body class="body" id="body">
+
+    <style>
+    .p1 { color:red; }
+    .p2 { color:blue; }
+    .p2.p1.p3 { color:yellow;}
+    </style>
+    <h1><p class="p2 p3 p1">hello</p></h1>
+    <select name="" id="select" multitype>
+        <option value="2">b</option>
+        <option value="1">a</option>
+    </select>
+    <input type="checkbox" value="1">
+    <input type="checkbox" value="2">
+    <div class="test"></div>
+    <div id="inner"></div>
+    <div id="" style="position:relative; left:20px; top:20px; width:300px; height:100px; border:solid 1px #bbb;">
+        <div id="test" style="position:relative; left:5px; top:5px; margin:10px; border:solid 1px #ccc;">
+            <p>1</p>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="t1">
+            <ul id="child1">
+                <li class="item">1</li>
+                <li class="item" style="display:none;">2</li>
+                <li class="item">3</li>
+            </ul>
+        </div>
+        <div class="t2">
+            <ul id="child2">
+                <li class="item">1</li>
+                <li class="item" style="display:none;">2</li>
+                <li class="item">3</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ss -->
+    <div id="demo" style="position:relative; left:10px; width:200px; height:200px; background:red; color:red; overflow:auto; ">
+        <p class="demo_item"><span id="span1">1</span></p>
+        <span>2</span>
+        <p style="height:500px;"></p>
+    </div>
+
+    <div style="height:1000px;"></div>
+    <div class="main">
+        <p>test1</p>
+    </div>
+    <div class="main">
+        <p>test2</p>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script srcxx="selector.js"></script>
+    <script>
+    //!function(){console.log("123")}()
+    </script>
+    <script>
+    var test = document.getElementById("test");
+    var demo = document.getElementById("demo");
+    var body = document.getElementById("body");
+    //console.log($(".main p"))
+    console.log($("p").first())
+    //console.log($('div.test:parent'))
+    //console.log($('option:selected'))
+    //console.log($(".parent").find(">*:eq(0)"))
+    //console.log($("#child1 .item").filter(".item:hidden"))
+    // document.addEventListener("click",function(){
+    //     console.log($('input:checked'))
+    // })
+    //console.log($("li").not(".item"))
+    //console.log($("input[type='checkbox']"))
+    //console.log(demo)
+    //demo.scrollTop=100
+    //$("#demo").scrollTop( 300 )
+    //console.log(test.children)
+    //console.log(document.getElementsByTagName("span"))
+    //console.log(test.nodeType)
+    //console.log(typeof $("#test"))
+    //var span = document.getElementById("span")
+    //console.log( typeof document.getElementsByTagName("span"))
+    //console.log($(".demo").find("span"))
+    //console.log($("li"))
+    //$("span").filter(".three")
+    //console.log($("span"))
+    //console.log($("span").slice(1,2))
+    //console.log(test.parentNode)
+    //console.log($("#test").closest(".test"))
+    //console.log($("#demo").children())
+    //console.log($("#demo").children(".demo_item"))
+    //console.log(test.contentDocument)
+    //$("#demo").html("demo")
+       // console.log($("#check1").attr("checked")); //=> "checked"
+        //console.log($("#check1").prop("checked")); //=> "true"
+    //$("body").data("borderWidth", 52);
+    //console.log(document.getElementById("select"))
+   // $("#select").val()
+    //$("#demo").offset({left:10})
+    //console.log(window.pageXOffset)
+    //console.log(demo.getBoundingClientRect().left)
+    // console.log($.map([1,2],function(){
+    //     return 0
+    // }))
+    //console.log($(".main").offsetParent())
+    //console.log($("#test").position())
+    //console.log($("#test").offset())
+    //$("#inner").wrap("<div class='new'></div>" );
+    //$("#demo").append($("#inner")[0])
+    //console.log($("#child").parents())
+    </script>
+</body>
+
+</html>

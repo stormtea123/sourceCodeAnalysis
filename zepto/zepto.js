@@ -566,6 +566,7 @@ var Zepto = (function() {
             return this.length > 0 && zepto.matches(this[0], selector)
         },
         //过滤当前Zepto集合，获取一个新的Zepto集合
+        //示例：$("li").not(".item")
         not: function(selector) {
             var nodes = []
             //selector是回调的时候，回调返回false时把Zepto集合当前项推入nodes中
