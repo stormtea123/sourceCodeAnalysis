@@ -138,6 +138,7 @@ var Zepto = (function() {
         })
     }
     //修正css属性名
+    //例如：transitionTimingFunction → transition-timing-function
     function dasherize(str) {
         return str.replace(/::/g, '/')
             .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
@@ -939,6 +940,8 @@ var Zepto = (function() {
                             this.style.removeProperty(dasherize(key))
                         })
                     else
+                        //dasherize(key)修正css属性名
+                        //例如：transitionTimingFunction → transition-timing-function
                         css += dasherize(key) + ':' + maybeAddPx(key, property[key]) + ';'
             }
             return this.each(function() {
