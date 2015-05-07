@@ -101,7 +101,7 @@
                 element.addEventListener(realEvent(handler.e), handler.proxy, eventCapture(handler, capture))
         })
     }
-
+    //移除事件
     function remove(element, events, fn, selector, capture) {
         var id = zid(element);
         (events || '').split(/\s/).forEach(function(event) {
@@ -140,13 +140,15 @@
             throw new TypeError("expected function")
         }
     }
-
+    //绑定事件
     $.fn.bind = function(event, data, callback) {
         return this.on(event, data, callback)
     }
+    //取消绑定事件
     $.fn.unbind = function(event, callback) {
         return this.off(event, callback)
     }
+    //处理函数在每个元素上每种事件类型最多执行一次
     $.fn.one = function(event, selector, data, callback) {
         return this.on(event, selector, data, callback, 1)
     }
@@ -196,10 +198,11 @@
 
         return compatible(proxy, event)
     }
-
+    //事件代理
     $.fn.delegate = function(selector, event, callback) {
         return this.on(event, selector, callback)
     }
+    //取消事件代理
     $.fn.undelegate = function(selector, event, callback) {
         return this.off(event, selector, callback)
     }
@@ -307,6 +310,7 @@
     }
 
     // shortcut methods for `.bind(event, fn)` for each event type
+    //每种事件绑定的快捷方式
     ;
     ('focusin focusout focus blur load resize scroll unload click dblclick ' +
         'mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave ' +
