@@ -28,7 +28,7 @@
     </select>
     <input type="checkbox" value="1">
     <input type="checkbox" value="2">
-    <div class="test"></div>
+    <div class="test" id="test"></div>
     <div id="inner"></div>
     <div id="" style="position:relative; left:20px; top:20px; width:300px; height:100px; border:solid 1px #bbb;">
         <div id="test" style="position:relative; left:5px; top:5px; margin:10px; border:solid 1px #ccc;">
@@ -76,8 +76,10 @@
     var test = document.getElementById("test");
     var demo = document.getElementById("demo");
     var body = document.getElementById("body");
+    $("body").data("name","张三")
+    $("body").data("name")
     //console.log($(".main p"))
-    console.log($("p").first())
+    //console.log($("#test"))
     //console.log($('div.test:parent'))
     //console.log($('option:selected'))
     //console.log($(".parent").find(">*:eq(0)"))

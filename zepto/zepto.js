@@ -859,6 +859,7 @@ var Zepto = (function() {
             var data = (1 in arguments) ?
                 this.attr(attrName, value) :
                 this.attr(attrName)
+            console.log(data)
             return data !== null ? deserializeValue(data) : undefined
         },
         //获取或设置元素的值
@@ -948,14 +949,16 @@ var Zepto = (function() {
                 this.style.cssText += ';' + css
             })
         },
-        //获得element在当前Zepto集合中的位置或当前Zeopto集合第一项在同辈元素中的位置
+        //获得element在当前Zepto集合中的位置或当前Zepto集合第一项在同辈元素中的位置
         index: function(element) {
             return element ? this.indexOf($(element)[0]) : this.parent().children().indexOf(this[0])
         },
         //判断有没有class
+        //some意指“某些”，是否“某些项”合乎条件
         hasClass: function(name) {
             if (!name) return false
             return emptyArray.some.call(this, function(el) {
+                //this指向classRE(name)
                 return this.test(className(el))
             }, classRE(name))
         },
